@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gauti Konsultaciją - Finansiškai Raštingi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/Finansiskai_Rastingi_final_logo-06.svg" alt="Finansiškai Raštingi" />
+                </div>
+                <nav class="navigation">
+                    <a href="index.html" class="nav-link">Pagrindinis</a>
+                    <a href="index.html#problem" class="nav-link">Problema</a>
+                    <a href="index.html#solution" class="nav-link">Sprendimas</a>
+                    <a href="index.html#lecturer" class="nav-link">Apie mane</a>
+                    <a href="index.html#faq" class="nav-link">DUK</a>
+                </nav>
+                <button class="header-cta" onclick="window.location.href='index.html'">
+                    Grįžti
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Trust Badges Bar -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="trust-badges-content">
+                <div class="trust-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Licencijuota ir reguliuojama Lietuvos Banko</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-lock"></i>
+                    <span>MiFID II apsauga</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Freedom24</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-building"></i>
+                    <span>Interactive Brokers</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-globe"></i>
+                    <span>Nasdaq</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-content">
+                <div class="form-header">
+                    <h1 class="form-title">Gauti Nemokamą Konsultaciją</h1>
+                    <p class="form-subtitle">Užpildykite formą ir mes susisieksime su jumis per 24 valandas</p>
+                </div>
+
+                <div class="form-container">
+                    <form class="consultation-form" id="consultationForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">
+                                <i class="fas fa-user"></i>
+                                Vardas ir pavardė *
+                            </label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                <i class="fas fa-envelope"></i>
+                                El. paštas *
+                            </label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">
+                                <i class="fas fa-phone"></i>
+                                Telefono numeris *
+                            </label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company" class="form-label">
+                                <i class="fas fa-building"></i>
+                                Įmonės pavadinimas
+                            </label>
+                            <input type="text" id="company" name="company" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="position" class="form-label">
+                                <i class="fas fa-briefcase"></i>
+                                Pareigos
+                            </label>
+                            <input type="text" id="position" name="position" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="investment" class="form-label">
+                                <i class="fas fa-euro-sign"></i>
+                                Investuojama suma (€)
+                            </label>
+                            <select id="investment" name="investment" class="form-select">
+                                <option value="">Pasirinkite...</option>
+                                <option value="10k-50k">€10,000 - €50,000</option>
+                                <option value="50k-100k">€50,000 - €100,000</option>
+                                <option value="100k-250k">€100,000 - €250,000</option>
+                                <option value="250k-500k">€250,000 - €500,000</option>
+                                <option value="500k+">€500,000+</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience" class="form-label">
+                                <i class="fas fa-chart-line"></i>
+                                Investavimo patirtis
+                            </label>
+                            <select id="experience" name="experience" class="form-select">
+                                <option value="">Pasirinkite...</option>
+                                <option value="beginner">Pradedantysis</option>
+                                <option value="intermediate">Vidutinis</option>
+                                <option value="advanced">Pažengęs</option>
+                                <option value="expert">Ekspertas</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="goals" class="form-label">
+                                <i class="fas fa-target"></i>
+                                Investavimo tikslai
+                            </label>
+                            <textarea id="goals" name="goals" class="form-textarea" rows="4" placeholder="Aprašykite savo investavimo tikslus ir lūkesčius..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">
+                                <i class="fas fa-comment"></i>
+                                Papildoma informacija
+                            </label>
+                            <textarea id="message" name="message" class="form-textarea" rows="3" placeholder="Turite klausimų ar papildomų informacijos?"></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span class="checkmark"></span>
+                                Sutinku su <a href="#" class="privacy-link">privatumo politika</a> *
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Noriu gauti investavimo patarimus ir naujienas
+                            </label>
+                        </div>
+
+                        <button type="submit" class="form-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Siųsti užklausą
+                        </button>
+                    </form>
+                </div>
+
+                <div class="form-benefits">
+                    <h3>Ką gausite:</h3>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Nemokama 60 min. konsultacija</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Asmeninis investavimo planas</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Mokesčių optimizavimo rekomendacijos</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Portfelio diversifikacijos patarimai</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/Finansiskai_Rastingi_final_logo-06.svg" alt="Finansiškai Raštingi" />
+                </div>
+                <div class="footer-links">
+                    <a href="https://go.finansiskairastingi.lt/privatumo-politika/">Privatumo politika</a>
+                    <a href="https://go.finansiskairastingi.lt/pristatymo-ir-grazinimo-taisykles/">Pristatymas ir grąžinimas</a>
+                    <a href="https://go.finansiskairastingi.lt/privatumo-politika/">Kontaktai</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.name || !data.email || !data.phone || !data.privacy) {
+                alert('Prašome užpildyti visus privalomus laukus');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = document.querySelector('.form-submit');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Siunčiama...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Ačiū! Jūsų užklausa sėkmingai išsiųsta. Susisieksime su jumis per 24 valandas.');
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Phone number formatting
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value.startsWith('370')) {
+                    value = '+' + value;
+                } else if (value.startsWith('8')) {
+                    value = '+370' + value.substring(1);
+                } else if (!value.startsWith('+')) {
+                    value = '+370' + value;
+                }
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>
