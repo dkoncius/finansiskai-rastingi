@@ -89,3 +89,105 @@ window.addEventListener('scroll', function() {
         header.style.transform = 'translateY(0)';
     }
 });
+
+// Testimonials Carousel
+let currentTestimonialIndex = 0;
+let testimonialInterval;
+
+function initTestimonialsCarousel() {
+    const track = document.getElementById('testimonialTrack');
+    const dotsContainer = document.getElementById('carouselDots');
+    const cards = track.querySelectorAll('.testimonial-card');
+    
+    if (!track || !dotsContainer || cards.length === 0) return;
+    
+    // Create dots
+    dotsContainer.innerHTML = '';
+    cards.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot';
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToTestimonial(index));
+        dotsContainer.appendChild(dot);
+    });
+    
+    // Auto-play carousel
+    startAutoPlay();
+    
+    // Pause on hover
+    const carousel = document.querySelector('.testimonials-carousel');
+    if (carousel) {
+        carousel.addEventListener('mouseenter', stopAutoPlay);
+        carousel.addEventListener('mouseleave', startAutoPlay);
+    }
+}
+
+function moveCarousel(direction) {
+    const track = document.getElementById('testimonialTrack');
+    const cards = track.querySelectorAll('.testimonial-card');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    if (!track || cards.length === 0) return;
+    
+    currentTestimonialIndex += direction;
+    
+    // Handle wrapping
+    if (currentTestimonialIndex >= cards.length) {
+        currentTestimonialIndex = 0;
+    } else if (currentTestimonialIndex < 0) {
+        currentTestimonialIndex = cards.length - 1;
+    }
+    
+    updateCarousel();
+}
+
+function goToTestimonial(index) {
+    const cards = document.querySelectorAll('.testimonial-card');
+    if (index >= 0 && index < cards.length) {
+        currentTestimonialIndex = index;
+        updateCarousel();
+    }
+}
+
+function updateCarousel() {
+    const track = document.getElementById('testimonialTrack');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    
+    if (!track) return;
+    
+    // Move track
+    const translateX = -currentTestimonialIndex * 100;
+    track.style.transform = `translateX(${translateX}%)`;
+    
+    // Update dots
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentTestimonialIndex);
+    });
+    
+    // Update button states (optional - for infinite loop we don't need to disable)
+    if (prevBtn && nextBtn) {
+        prevBtn.disabled = false;
+        nextBtn.disabled = false;
+    }
+}
+
+function startAutoPlay() {
+    stopAutoPlay(); // Clear any existing interval
+    testimonialInterval = setInterval(() => {
+        moveCarousel(1);
+    }, 5000); // Change slide every 5 seconds
+}
+
+function stopAutoPlay() {
+    if (testimonialInterval) {
+        clearInterval(testimonialInterval);
+        testimonialInterval = null;
+    }
+}
+
+// Initialize carousel when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initTestimonialsCarousel();
+});
