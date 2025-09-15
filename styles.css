@@ -1500,13 +1500,32 @@ body {
 
 /* Testimonials Section */
 .testimonials-section {
-    background: #333333;
+    background: linear-gradient(135deg, #111111 0%, #333333 50%, #111111 100%);
     padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('css-paterns/css-pattern-1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: 1;
+    transform: scale(1.2);
 }
 
 .testimonials-section .section-title {
     color: var(--text-white);
     margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
 }
 
 /* Testimonials Carousel */
@@ -1514,6 +1533,7 @@ body {
     position: relative;
     margin: 0 auto 3rem;
     max-width: 1000px;
+    z-index: 2;
 }
 
 .carousel-container {
@@ -1661,6 +1681,8 @@ body {
 
 .testimonials-cta {
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 /* FAQ Section - Mobile First */
