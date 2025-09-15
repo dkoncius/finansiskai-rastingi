@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investavimas: nuo ko pradėti? - Finansiškai Raštingi</title>
+    <title>Investavimas: nuo ko pradėti? - Finansiškai raštingi</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;500;600;700&family=Roboto:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet">
@@ -23,35 +23,48 @@
                     <a href="#faq" class="nav-link">DUK</a>
                 </nav>
                 <button class="header-cta" onclick="window.location.href='form.html'">
-                    Gauti Konsultaciją
+                    Gauti konsultaciją
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Trust Badges Bar -->
-    <section class="trust-badges">
+    <!-- Logo Carousel -->
+    <section class="logo-carousel">
         <div class="container">
-            <div class="trust-badges-content">
-                <div class="trust-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Licencijuota ir reguliuojama Lietuvos Banko</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-lock"></i>
-                    <span>MiFID II apsauga</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Freedom24</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-building"></i>
-                    <span>Interactive Brokers</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-globe"></i>
-                    <span>Nasdaq</span>
+            <div class="logo-carousel-content">
+                <div class="logo-track">
+                    <div class="logo-item">
+                        <img src="logos/lietuvos-bankas-logo.png" alt="Lietuvos Bankas" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/mifid-II-logo.png" alt="MiFID II" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/freedom24-logo.jpg" alt="Freedom24" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/interactive-brokers-logo.png" alt="Interactive Brokers" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/nasdaq-logo.png" alt="Nasdaq" />
+                    </div>
+                    <!-- Duplicate logos for seamless loop -->
+                    <div class="logo-item">
+                        <img src="logos/lietuvos-bankas-logo.png" alt="Lietuvos Bankas" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/mifid-II-logo.png" alt="MiFID II" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/freedom24-logo.jpg" alt="Freedom24" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/interactive-brokers-logo.png" alt="Interactive Brokers" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/nasdaq-logo.png" alt="Nasdaq" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,7 +76,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Kaip Jūsų Įmonės Laisvas Lėšas Paversti į 8-15% Metinę Grąžą (Be Pelno Mokesčio)</h1>
+                    <h1 class="hero-title">Kaip jūsų įmonės laisvas lėšas paversti į 8-15% metinę grąžą (be pelno mokesčio)</h1>
                     <h2 class="hero-subtitle">Išmokite investuoti pelningai, sutaupant tūkstančius eurų mokesčių ir išlaikant aukštą likvidumą / o dividendus mokėkite sau palankiu metu</h2>
                     
                     <div class="hero-video">
@@ -78,7 +91,7 @@
                     </div>
                     
                     <button class="cta-button" onclick="window.location.href='form.html'">
-                        Gauti Konsultaciją
+                        Gauti konsultaciją
                         <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
@@ -109,64 +122,63 @@
     <!-- Problem Agitation Section -->
     <section class="problem-section" id="problem">
         <div class="container">
-            <h2 class="section-title">Jūsų Pinigai Praranda Vertę</h2>
+            <h2 class="section-title">Jūsų pinigai praranda vertę</h2>
             <div class="problem-grid">
                 <div class="problem-card">
-                    <div class="problem-icon">
-                        <i class="fas fa-chart-line-down"></i>
-                    </div>
-                    <h3>📉 Infliacijos Praradimai</h3>
+                    <h3 class="card-title-with-icon">
+                        <i class="fas fa-university"></i>
+                        Jūsų pinigai banke
+                    </h3>
                     <div class="problem-content">
-                        <div class="money-loss">
-                            <h4>Jūsų €100,000 banke:</h4>
-                            <div class="loss-item">
-                                <span class="year">2022:</span>
-                                <span class="loss">-€20,000 (20% infliacija)</span>
+                        <div class="money-comparison">
+                            <div class="money-visual">
+                                <div class="money-bar bank-money">
+                                    <div class="money-amount">€100,000</div>
+                                    <div class="money-label">Pradžia</div>
+                                </div>
+                                <div class="arrow-down">
+                                    <i class="fas fa-arrow-down"></i>
+                                    <span>3 metai infliacijos</span>
+                                </div>
+                                <div class="money-bar final-money">
+                                    <div class="money-amount">€68,300</div>
+                                    <div class="money-label">Dabar</div>
+                                </div>
                             </div>
-                            <div class="loss-item">
-                                <span class="year">2023:</span>
-                                <span class="loss">-€8,200 (8.2% infliacija)</span>
+                            <div class="loss-summary">
+                                <div class="loss-amount">-€31,700</div>
+                                <div class="loss-text">Praradote per 3 metus</div>
                             </div>
-                            <div class="loss-item">
-                                <span class="year">2024:</span>
-                                <span class="loss">-€3,500 (3.5% infliacija)</span>
-                            </div>
-                            <div class="total-loss">
-                                <strong>Viso praradote: €31,700 per 3 metus ir turite 68,300</strong>
-                            </div>
-                            <div class="potential-gain">
-                                <strong>Galėjote uždirbti: 50K ir turėti 120K</strong>
-                        </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="problem-card">
-                    <div class="problem-icon">
-                        <i class="fas fa-percentage"></i>
-                    </div>
-                    <h3>💸 Mokesčių Neefektyvumas</h3>
+                    <h3 class="card-title-with-icon">
+                        <i class="fas fa-chart-line"></i>
+                        Investavimas
+                    </h3>
                     <div class="problem-content">
-                        <div class="tax-comparison">
-                            <h4>Investuojant 100K per fizinį asmenį:</h4>
-                            <div class="tax-item">
-                                <span>Fizinis asmuo:</span>
-                                <span class="tax-rate">15% GPM nuo pajamų</span>
-                            </div>
-                            <div class="tax-item">
-                                <span>Investicijų prieaugis:</span>
-                                <span class="tax-rate">15% papildomas mokestis</span>
-                            </div>
-                            <div class="total-tax">
-                                <strong>Mokesčių iš viso: iki 30%</strong>
-                            </div>
-                            
-                            <div class="solution-highlight">
-                                <h4>O jei investuotumėte per įmonę?</h4>
-                                <div class="zero-tax">
-                                    <strong>0% pelno mokestis!</strong>
+                        <div class="money-comparison">
+                            <div class="money-visual">
+                                <div class="money-bar bank-money">
+                                    <div class="money-amount">€100,000</div>
+                                    <div class="money-label">Pradžia</div>
                                 </div>
-                        </div>
+                                <div class="arrow-up">
+                                    <i class="fas fa-arrow-down"></i>
+                                    <span>12% metinė grąža</span>
+                                </div>
+                                <div class="money-bar gain-money">
+                                    <div class="money-amount">€140,500</div>
+                                    <div class="money-label">Po 3 metų</div>
+                                </div>
+                            </div>
+                            <div class="gain-summary highlight-gain">
+                                <div class="gain-amount">+€40,500</div>
+                                <div class="gain-text">UŽDIRBOTE per 3 metus!</div>
+                                <div class="gain-subtitle">Tai €13,500 per metus!</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -183,7 +195,7 @@
     <!-- Solution Section -->
     <section class="solution-section" id="solution">
         <div class="container">
-            <h2 class="section-title">Kaip Mes Jums Padėsime</h2>
+            <h2 class="section-title">Kaip mes jums padėsime</h2>
             
             <!-- Timeline Process -->
             <div class="timeline-container">
@@ -251,7 +263,7 @@
     <!-- After Seminar Section -->
     <section class="after-section">
         <div class="container">
-            <h2 class="section-title">Po seminaro:</h2>
+            <h2 class="section-title">Po konsultacijos:</h2>
             <div class="after-list">
                 <div class="after-item">
                     <div class="after-number">1</div>
@@ -286,7 +298,7 @@
                 </div>
             </div>
             <button class="cta-button" onclick="window.location.href='form.html'">
-                REGISTRUOTIS
+                Registruotis
                 <i class="fas fa-angle-down"></i>
             </button>
         </div>
@@ -304,7 +316,7 @@
                 </div>
                 <div class="why-item">
                     <h3 class="why-number">2.</h3>
-                    <h4>KONCENTRUOTA INFORMACIJA</h4>
+                    <h4>Koncentruota informacija</h4>
                     <p>Seminaras patiks ieškantiems koncentruotų žinių apie investavimo pradmenis vienoje vietoje, paprasta kalba.</p>
                 </div>
                 <div class="why-item">
@@ -350,7 +362,7 @@
                         </div>
                     </div>
                     <button class="cta-button" onclick="window.location.href='form.html'">
-                        Gauti Konsultaciją
+                        Gauti konsultaciją
                         <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
@@ -364,7 +376,7 @@
     <!-- Testimonials Section -->
     <section class="testimonials-section">
         <div class="container">
-            <h2 class="section-title">Ką Sako Mūsų Klientai</h2>
+            <h2 class="section-title">Ką sako mūsų klientai</h2>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
@@ -414,7 +426,7 @@
     <!-- FAQ Section -->
     <section class="faq-section" id="faq">
         <div class="container">
-            <h2 class="section-title">Dažniausiai Užduodami Klausimai</h2>
+            <h2 class="section-title">Dažniausiai užduodami klausimai</h2>
             
             <div class="faq-grid">
                 <div class="faq-item">
@@ -482,65 +494,8 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="faq-cta">
-                <button class="cta-button" onclick="window.location.href='form.html'">
-                    Gauti Konsultaciją
-                    <i class="fas fa-arrow-right"></i>
-                </button>
-            </div>
         </div>
     </section>
-
-    <!-- Registration Section -->
-    <section class="registration-section" id="reg">
-        <div class="container">
-            <h2 class="section-title">Gauti Konsultaciją</h2>
-            <h3 class="consultation-type">Nemokama konsultacija jūsų įmonės finansų optimizavimui</h3>
-            
-            <div class="consultation-info">
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <span>60 minučių konsultacija</span>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Finansų analizė ir rekomendacijos</span>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Mokesčių optimizavimo planas</span>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-handshake"></i>
-                    <span>Asmeninis konsultantas</span>
-                </div>
-            </div>
-            
-            <div class="consultation-value">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h4>Konsultacijos vertė</h4>
-                    </div>
-                    <div class="pricing-content">
-                        <div class="old-price-container">
-                            <span class="old-price">€200</span>
-                        </div>
-                        <div class="new-price-container">
-                            <span class="free-label">Jums:</span>
-                            <span class="new-price">NEMOKAMAI</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <button class="cta-button large">
-                Gauti Nemokamą Konsultaciją
-                <i class="fas fa-arrow-right"></i>
-            </button>
-        </div>
-    </section>
-
 
     <!-- Footer -->
     <footer class="footer">

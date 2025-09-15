@@ -118,29 +118,10 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('load', function() {
         document.body.classList.add('loaded');
         
-        // Animate hero content
-        const heroContent = document.querySelector('.hero-content');
-        if (heroContent) {
-            heroContent.style.opacity = '0';
-            heroContent.style.transform = 'translateY(50px)';
-            heroContent.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-            
-            setTimeout(() => {
-                heroContent.style.opacity = '1';
-                heroContent.style.transform = 'translateY(0)';
-            }, 300);
-        }
+        // Hero content animation removed - no height transformation needed
     });
 
-    // Add parallax effect to hero section
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            hero.style.transform = `translateY(${rate}px)`;
-        });
-    }
+    // Hero section parallax effect removed - no height transformation needed
 
     // Add counter animation for investment amount
     function animateCounter(element, target, duration = 2000) {

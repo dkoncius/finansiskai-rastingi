@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gauti Konsultaciją - Finansiškai Raštingi</title>
+    <title>Gauti konsultaciją - Finansiškai raštingi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,11 +16,7 @@
                     <img src="https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/Finansiskai_Rastingi_final_logo-06.svg" alt="Finansiškai Raštingi" />
                 </div>
                 <nav class="navigation">
-                    <a href="index.html" class="nav-link">Pagrindinis</a>
-                    <a href="index.html#problem" class="nav-link">Problema</a>
-                    <a href="index.html#solution" class="nav-link">Sprendimas</a>
-                    <a href="index.html#lecturer" class="nav-link">Apie mane</a>
-                    <a href="index.html#faq" class="nav-link">DUK</a>
+                    <!-- Navigation links removed - only back button remains -->
                 </nav>
                 <button class="header-cta" onclick="window.location.href='index.html'">
                     Grįžti
@@ -29,29 +25,42 @@
         </div>
     </header>
 
-    <!-- Trust Badges Bar -->
-    <section class="trust-badges">
+    <!-- Logo Carousel -->
+    <section class="logo-carousel">
         <div class="container">
-            <div class="trust-badges-content">
-                <div class="trust-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Licencijuota ir reguliuojama Lietuvos Banko</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-lock"></i>
-                    <span>MiFID II apsauga</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Freedom24</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-building"></i>
-                    <span>Interactive Brokers</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-globe"></i>
-                    <span>Nasdaq</span>
+            <div class="logo-carousel-content">
+                <div class="logo-track">
+                    <div class="logo-item">
+                        <img src="logos/lietuvos-bankas-logo.png" alt="Lietuvos Bankas" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/mifid-II-logo.png" alt="MiFID II" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/freedom24-logo.jpg" alt="Freedom24" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/interactive-brokers-logo.png" alt="Interactive Brokers" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/nasdaq-logo.png" alt="Nasdaq" />
+                    </div>
+                    <!-- Duplicate logos for seamless loop -->
+                    <div class="logo-item">
+                        <img src="logos/lietuvos-bankas-logo.png" alt="Lietuvos Bankas" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/mifid-II-logo.png" alt="MiFID II" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/freedom24-logo.jpg" alt="Freedom24" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/interactive-brokers-logo.png" alt="Interactive Brokers" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="logos/nasdaq-logo.png" alt="Nasdaq" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,8 +71,34 @@
         <div class="container">
             <div class="form-content">
                 <div class="form-header">
-                    <h1 class="form-title">Gauti Nemokamą Konsultaciją</h1>
+                    <h1 class="form-title">Gauti konsultaciją</h1>
                     <p class="form-subtitle">Užpildykite formą ir mes susisieksime su jumis per 24 valandas</p>
+                </div>
+
+                <div class="form-benefits">
+                    <h3>Ką gausite:</h3>
+                    <div class="urgency-banner">
+                        <i class="fas fa-clock"></i>
+                        <span class="urgency-text green-text">Nemokama konsultacija tik iki rugsėjo 31 d.!</span>
+                    </div>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Nemokama 60 min. konsultacija</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Asmeninis investavimo planas</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Mokesčių optimizavimo rekomendacijos</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Portfelio diversifikacijos patarimai</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="form-container">
@@ -176,27 +211,6 @@
                     </form>
                 </div>
 
-                <div class="form-benefits">
-                    <h3>Ką gausite:</h3>
-                    <div class="benefits-list">
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Nemokama 60 min. konsultacija</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Asmeninis investavimo planas</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Mokesčių optimizavimo rekomendacijos</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Portfelio diversifikacijos patarimai</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
