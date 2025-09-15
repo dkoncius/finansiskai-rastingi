@@ -1,0 +1,544 @@
+{
+  "website": {
+    "name": "Finansiškai Raštingi",
+    "language": "lt",
+    "type": "Investment consultation landing page",
+    "structure": {
+      "pages": [
+        {
+          "filename": "index.html",
+          "title": "Investavimas: nuo ko pradėti? - Finansiškai raštingi",
+          "type": "main_landing_page",
+          "sections": [
+            {
+              "id": "header",
+              "type": "navigation",
+              "content": {
+                "logo": "https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/Finansiskai_Rastingi_final_logo-06.svg",
+                "navigation_links": [
+                  "Pagrindinis",
+                  "Problema", 
+                  "Sprendimas",
+                  "Apie mane",
+                  "DUK"
+                ],
+                "cta_button": "Gauti konsultaciją"
+              }
+            },
+            {
+              "id": "logo-carousel",
+              "type": "social_proof",
+              "content": {
+                "logos": [
+                  "Lietuvos Bankas",
+                  "MiFID II", 
+                  "Freedom24",
+                  "Interactive Brokers",
+                  "Nasdaq"
+                ]
+              }
+            },
+            {
+              "id": "hero",
+              "type": "hero_section",
+              "content": {
+                "title": "Kaip jūsų įmonės laisvas lėšas paversti į 8-15% metinę grąžą (be pelno mokesčio)",
+                "subtitle": "Išmokite investuoti pelningai, sutaupant tūkstančius eurų mokesčių ir išlaikant aukštą likvidumą / o dividendus mokėkite sau palankiu metu",
+                "video": "https://www.youtube.com/embed/9bZkp7q19f0",
+                "cta_button": "Gauti konsultaciją"
+              }
+            },
+            {
+              "id": "social-proof",
+              "type": "statistics",
+              "content": {
+                "stats": [
+                  {
+                    "number": "2,000+",
+                    "label": "klientų"
+                  },
+                  {
+                    "number": "11+",
+                    "label": "m. patirtis"
+                  },
+                  {
+                    "number": "12.7%",
+                    "label": "vidutinė klientų grąža per metus"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "problem",
+              "type": "problem_agitation",
+              "content": {
+                "title": "Jūsų pinigai praranda vertę",
+                "comparison": {
+                  "bank_investment": {
+                    "initial": "€100,000",
+                    "after_3_years": "€68,300",
+                    "loss": "-€31,700"
+                  },
+                  "proper_investment": {
+                    "initial": "€100,000", 
+                    "after_3_years": "€140,500",
+                    "gain": "+€40,500"
+                  }
+                }
+              }
+            },
+            {
+              "id": "solution",
+              "type": "solution_process",
+              "content": {
+                "title": "Kaip mes jums padėsime",
+                "process_steps": [
+                  {
+                    "icon": "fas fa-chart-pie",
+                    "title": "Įvertiname jūsų įmonės",
+                    "description": "finansinę situaciją, tikslus ir rizikos toleranciją"
+                  },
+                  {
+                    "icon": "fas fa-chess",
+                    "title": "Strategija",
+                    "description": "Sukuriame investicijų portfelį ir mokesčių optimizavimo planą"
+                  },
+                  {
+                    "icon": "fas fa-seedling",
+                    "title": "Atidarome sąskaitą",
+                    "description": "mokome investuoti, lydime kiekviename žingsnyje"
+                  }
+                ],
+                "benefits": [
+                  "8-15% vidutinė metinė grąža",
+                  "Augimo arba dividendus mokantis portfelis",
+                  "Likvidumas per 1-3 dienas",
+                  "0% pelno mokesčio juridiniams asmenims",
+                  "EU reguliuojamas brokeris",
+                  "Diversifikacija į 23 pasaulio rinkas"
+                ]
+              }
+            },
+            {
+              "id": "after-seminar",
+              "type": "benefits_list",
+              "content": {
+                "title": "Po konsultacijos:",
+                "benefits": [
+                  {
+                    "number": "1",
+                    "title": "Diversifikuotas portfelis",
+                    "description": "Išmoksite, kaip sudaryti diversifikuotą investicinį portfelį, kuris atitiks jūsų tikslus ir rizikos toleranciją."
+                  },
+                  {
+                    "number": "2", 
+                    "title": "Emocijų valdymas",
+                    "description": "Suprasite, kaip emocijos veikia jūsų sprendimus ir kaip jas suvaldyti."
+                  },
+                  {
+                    "number": "3",
+                    "title": "Investavimo būdai", 
+                    "description": "Atrasite, kokie investavimo būdai tinka jums dabartinėje ekonominėje situacijoje."
+                  },
+                  {
+                    "number": "4",
+                    "title": "Paprastumas",
+                    "description": "Įsisavinsit, jog investuoti nėra sudėtinga ir tam tikrai nereikia daug laiko ar didelių pinigų sumų"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "why-participate",
+              "type": "value_proposition",
+              "content": {
+                "title": "Kodėl verta dalyvauti?",
+                "reasons": [
+                  {
+                    "number": "1",
+                    "title": "Praktinės ir realios žinios",
+                    "description": "Seminaro lektorius - licencijuotas investicijų konsultantas, užkietėjęs investuotojas, kas mėnesį investuojantis 70-80% savo gaunamų pinigų.",
+                    "illustration": "undraw iliustration/investing.svg"
+                  },
+                  {
+                    "number": "2",
+                    "title": "Koncentruota informacija",
+                    "description": "Seminaras patiks ieškantiems koncentruotų žinių apie investavimo pradmenis vienoje vietoje, paprasta kalba.",
+                    "illustration": "undraw iliustration/file-search.svg"
+                  },
+                  {
+                    "number": "3",
+                    "title": "Individualumas",
+                    "description": "Seminaro dalyviams dovanojame 1 val. edukacinę konsultaciją pasirinktomis asmeninių finansų valdymo temomis.",
+                    "illustration": "undraw iliustration/bitcoin.svg"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "lecturer",
+              "type": "about_section",
+              "content": {
+                "title": "Apie mane",
+                "lecturer": {
+                  "name": "Gintaras Pociūnas",
+                  "title": "Licencijuotas investicijų konsultantas",
+                  "image": "https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/g-sypt.jpg",
+                  "stats": [
+                    {
+                      "number": "11+",
+                      "label": "m. patirtis"
+                    },
+                    {
+                      "number": "€1.6M",
+                      "label": "portfelis"
+                    },
+                    {
+                      "number": "150+",
+                      "label": "klientai"
+                    },
+                    {
+                      "number": "12.7%",
+                      "label": "vidutinė grąža"
+                    }
+                  ],
+                  "credentials": [
+                    "11 metų verslo ir investavimo patirtis",
+                    "Licencijuotas investicijų konsultantas",
+                    "Million Dollar Round Table narys",
+                    "4 verslų akcininkas Lietuvoje ir užsienyje",
+                    "Asmeninis €1.6M investicijų portfelis",
+                    "Padėjo 150+ Lietuvos įmonėms optimizuoti finansus"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "testimonials",
+              "type": "customer_reviews",
+              "content": {
+                "title": "Ką sako mūsų klientai",
+                "reviews": [
+                  {
+                    "quote": "Pats praradau daug pinigų versle, bet investicijos leido man atsistoti ant kojų ir kurti naujus projektus. Dabar mokau kitus išvengti mano klaidų.",
+                    "author": "Jonas K.",
+                    "company": "Gamybos įmonė, Kaunas",
+                    "rating": "⭐⭐⭐⭐⭐"
+                  },
+                  {
+                    "quote": "Per 18 mėnesių mūsų €180,000 rezervas uždirbo €13,500 ir sutaupėme €2,025 mokesčių. Tai 50 kartų geriau nei banke.",
+                    "author": "Jonas K.",
+                    "company": "Gamybos įmonė, Kaunas", 
+                    "rating": "⭐⭐⭐⭐⭐"
+                  },
+                  {
+                    "quote": "Investavimas per įmonę buvo geriausias sprendimas. Mūsų pinigai ne tik saugūs, bet ir auga. Rekomenduoju visiems verslininkams.",
+                    "author": "Marija L.",
+                    "company": "IT įmonė, Vilnius",
+                    "rating": "⭐⭐⭐⭐⭐"
+                  },
+                  {
+                    "quote": "Profesionalus požiūris ir aiškūs patarimai. Dabar mūsų įmonės finansai tvarkomi daug efektyviau. Ačiū už pagalbą!",
+                    "author": "Petras S.",
+                    "company": "Statybos įmonė, Klaipėda",
+                    "rating": "⭐⭐⭐⭐⭐"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "faq",
+              "type": "frequently_asked_questions",
+              "content": {
+                "title": "Dažniausiai užduodami klausimai",
+                "questions": [
+                  {
+                    "question": "Ar tai legalu investuoti per įmonę be pelno mokesčio?",
+                    "answer": "Taip, pagal Lietuvos įstatymą juridiniai asmenys nemoka pelno mokesčio nuo tam tikrų fondų investicijų."
+                  },
+                  {
+                    "question": "Kiek laiko užtrunka pradėti investuoti?",
+                    "answer": "Sąskaitos atidarymas - 1-3 darbo dienos. Pirmosios investicijos - iškart po konsultacijos."
+                  },
+                  {
+                    "question": "Ar galiu atsiimti pinigus bet kada?",
+                    "answer": "Taip, akcijos ir ETF yra likvidūs. Pinigus gausite per 1-3 darbo dienas."
+                  },
+                  {
+                    "question": "Koks minimalus investicijos dydis?",
+                    "answer": "Rekomenduojame pradėti nuo €5,000, bet galima ir nuo €1,000."
+                  },
+                  {
+                    "question": "Ar Freedom24 saugus brokeris?",
+                    "answer": "Freedom24 - NASDAQ listinguojama kompanija, reguliuojama CySEC, turi 400,000+ klientų EU."
+                  }
+                ]
+              }
+            },
+            {
+              "id": "footer",
+              "type": "footer",
+              "content": {
+                "logo": "https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/Finansiskai_Rastingi_final_logo-06.svg",
+                "links": [
+                  "Privatumo politika",
+                  "Pristatymas ir grąžinimas", 
+                  "Kontaktai"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "filename": "form.html",
+          "title": "Gauti konsultaciją - Finansiškai raštingi",
+          "type": "consultation_form_page",
+          "sections": [
+            {
+              "id": "header",
+              "type": "navigation",
+              "content": {
+                "logo": "https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/Finansiskai_Rastingi_final_logo-06.svg",
+                "navigation_links": [
+                  "Pagrindinis",
+                  "Problema",
+                  "Sprendimas", 
+                  "Apie mane",
+                  "DUK"
+                ],
+                "cta_button": "Grįžti"
+              }
+            },
+            {
+              "id": "logo-carousel",
+              "type": "social_proof",
+              "content": {
+                "logos": [
+                  "Lietuvos Bankas",
+                  "MiFID II",
+                  "Freedom24", 
+                  "Interactive Brokers",
+                  "Nasdaq"
+                ]
+              }
+            },
+            {
+              "id": "form-section",
+              "type": "consultation_form",
+              "content": {
+                "title": "Gauti konsultaciją",
+                "subtitle": "Užpildykite formą ir mes susisieksime su jumis per 24 valandas",
+                "urgency_banner": "Nemokama konsultacija tik iki rugsėjo 31 d.!",
+                "benefits": [
+                  "Nemokama 60 min. konsultacija",
+                  "Asmeninis investavimo planas",
+                  "Mokesčių optimizavimo rekomendacijos",
+                  "Portfelio diversifikacijos patarimai"
+                ],
+                "form_fields": [
+                  {
+                    "name": "name",
+                    "label": "Vardas ir pavardė",
+                    "type": "text",
+                    "required": true
+                  },
+                  {
+                    "name": "email", 
+                    "label": "El. paštas",
+                    "type": "email",
+                    "required": true
+                  },
+                  {
+                    "name": "phone",
+                    "label": "Telefono numeris", 
+                    "type": "tel",
+                    "required": true
+                  },
+                  {
+                    "name": "company",
+                    "label": "Įmonės pavadinimas",
+                    "type": "text",
+                    "required": false
+                  },
+                  {
+                    "name": "position",
+                    "label": "Pareigos",
+                    "type": "text", 
+                    "required": false
+                  },
+                  {
+                    "name": "investment",
+                    "label": "Investuojama suma (€)",
+                    "type": "select",
+                    "options": [
+                      "€10,000 - €50,000",
+                      "€50,000 - €100,000", 
+                      "€100,000 - €250,000",
+                      "€250,000 - €500,000",
+                      "€500,000+"
+                    ],
+                    "required": false
+                  },
+                  {
+                    "name": "experience",
+                    "label": "Investavimo patirtis",
+                    "type": "select",
+                    "options": [
+                      "Pradedantysis",
+                      "Vidutinis",
+                      "Pažengęs", 
+                      "Ekspertas"
+                    ],
+                    "required": false
+                  },
+                  {
+                    "name": "goals",
+                    "label": "Investavimo tikslai",
+                    "type": "textarea",
+                    "required": false
+                  },
+                  {
+                    "name": "message",
+                    "label": "Papildoma informacija",
+                    "type": "textarea",
+                    "required": false
+                  }
+                ],
+                "checkboxes": [
+                  {
+                    "name": "privacy",
+                    "label": "Sutinku su privatumo politika",
+                    "required": true
+                  },
+                  {
+                    "name": "newsletter",
+                    "label": "Noriu gauti investavimo patarimus ir naujienas",
+                    "required": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": "footer",
+              "type": "footer",
+              "content": {
+                "logo": "https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/Finansiskai_Rastingi_final_logo-06.svg",
+                "links": [
+                  "Privatumo politika",
+                  "Pristatymas ir grąžinimas",
+                  "Kontaktai"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "assets": {
+        "css": {
+          "main_stylesheet": "styles.css",
+          "external_fonts": [
+            "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css",
+            "https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;500;600;700&family=Roboto:wght@400;600&family=Raleway:wght@600;800&display=swap"
+          ]
+        },
+        "javascript": {
+          "main_script": "script.js",
+          "functionality": [
+            "Mobile menu toggle",
+            "FAQ accordion",
+            "Lecturer accordion", 
+            "Testimonials carousel",
+            "Smooth scrolling",
+            "Header scroll effects",
+            "Form validation and submission"
+          ]
+        },
+        "images": {
+          "logos": [
+            "logos/lietuvos-bankas-logo.png",
+            "logos/mifid-II-logo.png", 
+            "logos/freedom24-logo.jpg",
+            "logos/interactive-brokers-logo.png",
+            "logos/nasdaq-logo.png",
+            "logos/mobile.png",
+            "logos/mobile 2.png"
+          ],
+          "css_patterns": [
+            "css-paterns/css-pattern-1.png",
+            "css-paterns/css-pattern-2.png"
+          ],
+          "illustrations": [
+            "undraw iliustration/bitcoin.svg",
+            "undraw iliustration/file-search.svg",
+            "undraw iliustration/investing.svg",
+            "undraw iliustration/revenue.svg",
+            "undraw iliustration/saving.svg"
+          ],
+          "external_images": [
+            "https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/Finansiskai_Rastingi_final_logo-06.svg",
+            "https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/g-sypt.jpg",
+            "https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/60792166_2419569964744201_469806573925957632_n-1.jpg"
+          ]
+        }
+      },
+      "design_system": {
+        "colors": {
+          "primary": "#28B463",
+          "primary_hover": "#229954",
+          "text_dark": "#000000",
+          "text_light": "#cccccc", 
+          "text_white": "#ffffff",
+          "bg_dark": "#000000",
+          "bg_light": "#ffffff"
+        },
+        "typography": {
+          "primary_font": "Helvetica",
+          "secondary_fonts": ["Roboto", "Raleway"],
+          "font_weights": [300, 400, 500, 600, 700, 800, 900]
+        },
+        "layout": {
+          "container_max_width": "1200px",
+          "responsive_breakpoints": {
+            "mobile": "max-width: 788px",
+            "desktop": "min-width: 789px"
+          }
+        }
+      },
+      "functionality": {
+        "interactive_elements": [
+          "Mobile responsive navigation",
+          "FAQ accordion system",
+          "Testimonials carousel with auto-play",
+          "Lecturer credentials accordion",
+          "Form validation and submission",
+          "Smooth scrolling navigation",
+          "Header scroll effects"
+        ],
+        "form_handling": {
+          "validation": "Client-side validation",
+          "phone_formatting": "Automatic Lithuanian phone number formatting",
+          "submission": "Simulated form submission with loading states"
+        }
+      },
+      "business_info": {
+        "service": "Investment consultation for companies",
+        "target_audience": "Lithuanian business owners and companies",
+        "value_proposition": "8-15% annual returns with 0% profit tax for legal entities",
+        "consultant": {
+          "name": "Gintaras Pociūnas",
+          "credentials": "Licensed investment consultant",
+          "experience": "11+ years",
+          "portfolio": "€1.6M personal portfolio",
+          "clients": "150+ companies helped"
+        },
+        "key_benefits": [
+          "Tax optimization for legal entities",
+          "High liquidity (1-3 days)",
+          "EU regulated broker",
+          "Diversification across 23 world markets",
+          "Professional guidance and support"
+        ]
+      }
+    }
+  }
+}
