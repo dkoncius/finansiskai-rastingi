@@ -13,10 +13,11 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
+                <div class="logo" onclick="window.location.href='index.html'">
                     <img src="https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/Finansiskai_Rastingi_final_logo-06.svg" alt="Finansiškai Raštingi" />
                 </div>
                 <nav class="navigation">
+                    <a href="index.html" class="nav-link">Pagrindinis</a>
                     <a href="#problem" class="nav-link">Problema</a>
                     <a href="#solution" class="nav-link">Sprendimas</a>
                     <a href="#lecturer" class="nav-link">Apie mane</a>
@@ -25,9 +26,43 @@
                 <button class="header-cta" onclick="window.location.href='form.html'">
                     Gauti konsultaciją
                 </button>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Menu Dropdown -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <img src="https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/Finansiskai_Rastingi_final_logo-06.svg" alt="Finansiškai Raštingi" />
+                </div>
+                <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="mobile-navigation">
+                <a href="index.html" class="mobile-nav-link" onclick="toggleMobileMenu()">Pagrindinis</a>
+                <a href="#problem" class="mobile-nav-link" onclick="toggleMobileMenu()">Problema</a>
+                <a href="#solution" class="mobile-nav-link" onclick="toggleMobileMenu()">Sprendimas</a>
+                <a href="#lecturer" class="mobile-nav-link" onclick="toggleMobileMenu()">Apie mane</a>
+                <a href="#faq" class="mobile-nav-link" onclick="toggleMobileMenu()">DUK</a>
+            </nav>
+            
+            <div class="mobile-menu-cta">
+                <button class="mobile-cta-button" onclick="window.location.href='form.html'">
+                    Gauti konsultaciją
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Logo Carousel -->
     <section class="logo-carousel">
@@ -298,8 +333,8 @@
                 </div>
             </div>
             <button class="cta-button" onclick="window.location.href='form.html'">
-                Registruotis
-                <i class="fas fa-angle-down"></i>
+                Gauti konsultaciją
+                <i class="fas fa-arrow-right"></i>
             </button>
         </div>
     </section>
@@ -328,46 +363,102 @@
         </div>
     </section>
 
-    <!-- Lecturer Section -->
+    <!-- 
+    LECTURER SECTION - ELEMENTOR FRIENDLY VERSION
+    
+    Ši sekcija sukurta taip, kad būtų lengva atkartoti Elementor redaktoriuje:
+    
+    1. Kompaktiška informacija viršuje:
+       - Nuotrauka (120x120px, apvali)
+       - Vardas ir pavardė
+       - Pareigos
+       - 3 pagrindiniai statistikos skaičiai
+    
+    2. Accordion dropdown su išsamia informacija:
+       - Visi 6 kredencialai su ikonėlėmis
+       - Išsiskleidžia paspaudus "Išsami informacija"
+    
+    3. CTA mygtukas apačioje
+    
+    Elementor atkartojimui:
+    - Naudokite "Text Editor" widget'ą accordion turiniui
+    - "Image" widget'ą nuotraukai
+    - "Button" widget'ą CTA mygtukui
+    - "Accordion" widget'ą dropdown funkcionalumui
+    -->
     <section class="lecturer-section" id="lecturer">
         <div class="container">
             <h2 class="section-title">Apie mane</h2>
-            <div class="lecturer-content">
-                <div class="lecturer-info">
-                    <h3>Gintaras Pociūnas</h3>
-                    <div class="lecturer-credentials">
-                        <div class="credential-item">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>11 metų verslo ir investavimo patirtis</span>
-                        </div>
-                        <div class="credential-item">
-                            <i class="fas fa-certificate"></i>
-                            <span>Licencijuotas investicijų konsultantas</span>
-                        </div>
-                        <div class="credential-item">
-                            <i class="fas fa-trophy"></i>
-                            <span>Million Dollar Round Table narys</span>
-                        </div>
-                        <div class="credential-item">
-                            <i class="fas fa-building"></i>
-                            <span>4 verslų akcininkas Lietuvoje ir užsienyje</span>
-                        </div>
-                        <div class="credential-item">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Asmeninis €1.6M investicijų portfelis</span>
-                        </div>
-                        <div class="credential-item">
-                            <i class="fas fa-users"></i>
-                            <span>Padėjo 150+ Lietuvos įmonėms optimizuoti finansus</span>
+            
+            <!-- Compact Lecturer Info -->
+            <div class="lecturer-compact">
+                <div class="lecturer-basic-info">
+                    <div class="lecturer-image-small">
+                        <img src="https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/g-sypt.jpg" alt="Gintaras Pociūnas" />
+                    </div>
+                    <div class="lecturer-summary">
+                        <h3>Gintaras Pociūnas</h3>
+                        <p class="lecturer-title">Licencijuotas investicijų konsultantas</p>
+                        <div class="key-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">11+</span>
+                                <span class="stat-label">m. patirtis</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">€1.6M</span>
+                                <span class="stat-label">portfelis</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">150+</span>
+                                <span class="stat-label">klientai</span>
+                            </div>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Accordion for detailed info -->
+                <div class="lecturer-accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleLecturerAccordion(this)">
+                            <h4>Išsami informacija</h4>
+                            <i class="fas fa-chevron-down accordion-arrow"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="detailed-credentials">
+                                <div class="credential-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>11 metų verslo ir investavimo patirtis</span>
+                                </div>
+                                <div class="credential-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Licencijuotas investicijų konsultantas</span>
+                                </div>
+                                <div class="credential-item">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>Million Dollar Round Table narys</span>
+                                </div>
+                                <div class="credential-item">
+                                    <i class="fas fa-building"></i>
+                                    <span>4 verslų akcininkas Lietuvoje ir užsienyje</span>
+                                </div>
+                                <div class="credential-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Asmeninis €1.6M investicijų portfelis</span>
+                                </div>
+                                <div class="credential-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Padėjo 150+ Lietuvos įmonėms optimizuoti finansus</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lecturer-cta">
                     <button class="cta-button" onclick="window.location.href='form.html'">
                         Gauti konsultaciją
                         <i class="fas fa-arrow-right"></i>
                     </button>
-                </div>
-                <div class="lecturer-image">
-                    <img src="https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/g-sypt.jpg" alt="Gintaras Pociūnas" />
                 </div>
             </div>
         </div>

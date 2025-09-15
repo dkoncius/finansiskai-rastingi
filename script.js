@@ -25,6 +25,39 @@ function toggleFAQ(questionElement) {
     }
 }
 
+// Lecturer Accordion toggle function
+function toggleLecturerAccordion(headerElement) {
+    const accordionItem = headerElement.closest('.accordion-item');
+    const isActive = accordionItem.classList.contains('active');
+    
+    // Close all other accordion items
+    document.querySelectorAll('.accordion-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    
+    // Toggle current item
+    if (!isActive) {
+        accordionItem.classList.add('active');
+    }
+}
+
+// Mobile Menu toggle function
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const body = document.body;
+    
+    if (mobileMenu.classList.contains('active')) {
+        // Close menu
+        mobileMenu.classList.remove('active');
+        body.style.overflow = '';
+    } else {
+        // Open menu
+        mobileMenu.classList.add('active');
+        body.style.overflow = 'hidden';
+    }
+}
+
+
 // Add smooth scrolling to all CTA buttons
 document.addEventListener('DOMContentLoaded', function() {
     // Add click event listeners to all CTA buttons
@@ -219,8 +252,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add keyboard navigation support
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
-            // Close any open modals or menus
-            document.body.classList.remove('mobile-menu-open');
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu && mobileMenu.classList.contains('active')) {
+                toggleMobileMenu();
+            }
+        }
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        
+        if (mobileMenu && mobileMenu.classList.contains('active')) {
+            // Check if click is outside the mobile menu and not on the menu button
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                toggleMobileMenu();
+            }
         }
     });
 
@@ -298,6 +347,8 @@ function throttle(func, limit) {
 
 // Export functions for potential use in other scripts
 window.scrollToRegistration = scrollToRegistration;
+window.toggleLecturerAccordion = toggleLecturerAccordion;
+window.toggleMobileMenu = toggleMobileMenu;
 window.trackEvent = function(eventName, element) {
     console.log(`Event tracked: ${eventName}`, element);
 };
