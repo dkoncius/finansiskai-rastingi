@@ -1,17 +1,3 @@
-// Mobile Menu Toggle
-function toggleMobileMenu() {
-    const mobileMenu = document.getElementById('mobileMenu');
-    const body = document.body;
-    
-    if (mobileMenu.classList.contains('active')) {
-        mobileMenu.classList.remove('active');
-        body.style.overflow = '';
-    } else {
-        mobileMenu.classList.add('active');
-        body.style.overflow = 'hidden';
-    }
-}
-
 // FAQ Toggle
 function toggleFAQ(element) {
     const faqItem = element.closest('.faq-item');
@@ -44,27 +30,21 @@ function toggleLecturerAccordion(element) {
     }
 }
 
-// Close mobile menu when clicking outside
-document.addEventListener('click', function(e) {
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+// Process Step Accordion Toggle
+function toggleStep(element) {
+    const processStep = element.closest('.process-step');
+    const isActive = processStep.classList.contains('active');
     
-    if (mobileMenu && mobileMenu.classList.contains('active')) {
-        if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
-            toggleMobileMenu();
-        }
+    // Close all process steps
+    document.querySelectorAll('.process-step').forEach(step => {
+        step.classList.remove('active');
+    });
+    
+    // Open clicked step if it wasn't active
+    if (!isActive) {
+        processStep.classList.add('active');
     }
-});
-
-// Close mobile menu with Escape key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        const mobileMenu = document.getElementById('mobileMenu');
-        if (mobileMenu && mobileMenu.classList.contains('active')) {
-            toggleMobileMenu();
-        }
-    }
-});
+}
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -80,15 +60,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Header scroll effect
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 100) {
-        header.style.transform = 'translateY(-100%)';
-    } else {
-        header.style.transform = 'translateY(0)';
-    }
-});
+// (Header and mobile menu functionality removed intentionally)
 
 // Testimonials Carousel
 let currentTestimonialIndex = 0;
@@ -205,7 +177,7 @@ const sp500Returns = {
 };
 
 function formatCurrency(amount) {
-    return new Intl.NumberFormat('lt-LT', {
+    return new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'EUR',
         minimumFractionDigits: 0,

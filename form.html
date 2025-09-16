@@ -7,61 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo" onclick="window.location.href='index.html'">
-                    <img src="https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/Finansiskai_Rastingi_final_logo-06.svg" alt="Finansiškai Raštingi" />
-                </div>
-                <nav class="navigation">
-                    <a href="index.html" class="nav-link">Pagrindinis</a>
-                    <a href="index.html#problem" class="nav-link">Problema</a>
-                    <a href="index.html#solution" class="nav-link">Sprendimas</a>
-                    <a href="index.html#lecturer" class="nav-link">Apie mane</a>
-                    <a href="index.html#faq" class="nav-link">DUK</a>
-                </nav>
-                <button class="header-cta" onclick="window.location.href='index.html'">
-                    Grįžti
-                </button>
-                
-                <!-- Mobile Menu Button -->
-                <button class="mobile-menu-button" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Mobile Menu Dropdown -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-content">
-            <div class="mobile-menu-header">
-                <div class="mobile-logo">
-                    <img src="https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/Finansiskai_Rastingi_final_logo-06.svg" alt="Finansiškai Raštingi" />
-                </div>
-                <button class="mobile-menu-close" onclick="toggleMobileMenu()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <nav class="mobile-navigation">
-                <a href="index.html" class="mobile-nav-link" onclick="toggleMobileMenu()">Pagrindinis</a>
-                <a href="index.html#problem" class="mobile-nav-link" onclick="toggleMobileMenu()">Problema</a>
-                <a href="index.html#solution" class="mobile-nav-link" onclick="toggleMobileMenu()">Sprendimas</a>
-                <a href="index.html#lecturer" class="mobile-nav-link" onclick="toggleMobileMenu()">Apie mane</a>
-                <a href="index.html#faq" class="mobile-nav-link" onclick="toggleMobileMenu()">DUK</a>
-            </nav>
-            
-            <div class="mobile-menu-cta">
-                <button class="mobile-cta-button" onclick="window.location.href='index.html'">
-                    Grįžti į pagrindinį
-                    <i class="fas fa-arrow-left"></i>
-                </button>
-            </div>
-        </div>
-    </div>
+<body class="form-dark">
+    
 
     <!-- Logo Carousel -->
     <section class="logo-carousel">
@@ -69,35 +16,35 @@
             <div class="logo-carousel-content">
                 <div class="logo-track">
                     <div class="logo-item">
-                        <img src="logos/lietuvos-bankas-logo.png" alt="Lietuvos Bankas" />
+                        <img src="logos/freedom24-logo.png" alt="Freedom24 - NASDAQ listinguojama investicijų platforma" />
                     </div>
                     <div class="logo-item">
-                        <img src="logos/mifid-II-logo.png" alt="MiFID II" />
+                        <img src="logos/interactive-brokers-logo.png" alt="Interactive Brokers - tarptautinis investicijų brokeris" />
                     </div>
                     <div class="logo-item">
-                        <img src="logos/freedom24-logo.jpg" alt="Freedom24" />
+                        <img src="logos/nasdaq-logo.png" alt="NASDAQ - pasaulinė akcijų birža" />
                     </div>
                     <div class="logo-item">
-                        <img src="logos/interactive-brokers-logo.png" alt="Interactive Brokers" />
+                        <img src="logos/lietuvos-bankas-logo.png" alt="Lietuvos Bankas - Lietuvos centrinis bankas" />
                     </div>
                     <div class="logo-item">
-                        <img src="logos/nasdaq-logo.png" alt="Nasdaq" />
+                        <img src="logos/mifid-II-logo.png" alt="MiFID II - Europos investicijų reguliavimo direktyva" />
                     </div>
                     <!-- Duplicate logos for seamless loop -->
                     <div class="logo-item">
-                        <img src="logos/lietuvos-bankas-logo.png" alt="Lietuvos Bankas" />
+                        <img src="logos/freedom24-logo.png" alt="Freedom24 - NASDAQ listinguojama investicijų platforma" />
                     </div>
                     <div class="logo-item">
-                        <img src="logos/mifid-II-logo.png" alt="MiFID II" />
+                        <img src="logos/interactive-brokers-logo.png" alt="Interactive Brokers - tarptautinis investicijų brokeris" />
                     </div>
                     <div class="logo-item">
-                        <img src="logos/freedom24-logo.jpg" alt="Freedom24" />
+                        <img src="logos/nasdaq-logo.png" alt="NASDAQ - pasaulinė akcijų birža" />
                     </div>
                     <div class="logo-item">
-                        <img src="logos/interactive-brokers-logo.png" alt="Interactive Brokers" />
+                        <img src="logos/lietuvos-bankas-logo.png" alt="Lietuvos Bankas - Lietuvos centrinis bankas" />
                     </div>
                     <div class="logo-item">
-                        <img src="logos/nasdaq-logo.png" alt="Nasdaq" />
+                        <img src="logos/mifid-II-logo.png" alt="MiFID II - Europos investicijų reguliavimo direktyva" />
                     </div>
                 </div>
             </div>
@@ -246,6 +193,10 @@
                             <i class="fas fa-paper-plane"></i>
                             Siųsti užklausą
                         </button>
+                        <a href="index.html" class="back-button" aria-label="Grįžti į pagrindinį">
+                            <i class="fas fa-arrow-left"></i>
+                            Grįžti atgal
+                        </a>
                     </form>
                 </div>
 
