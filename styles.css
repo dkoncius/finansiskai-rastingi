@@ -1960,7 +1960,7 @@ body {
 .testimonials-carousel {
     position: relative;
     margin: 0 auto 3rem;
-    max-width: 1200px;
+    max-width: 600px;
     z-index: 2;
 }
 
