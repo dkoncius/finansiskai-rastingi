@@ -107,9 +107,14 @@
                         <div class="form-group">
                             <label for="phone" class="form-label">
                                 <i class="fas fa-phone"></i>
-                                Telefono numeris *
+                                Telefono numeris * (formatas: +370XXXXXXXX)
                             </label>
-                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                            <input type="tel" id="phone" name="phone" class="form-input" 
+                                   placeholder="+370XXXXXXXX" 
+                                   pattern="^\+370[0-9]{8}$" 
+                                   title="Įveskite telefono numerį formatu +370XXXXXXXX" 
+                                   required>
+                            <small class="form-help">Pvz.: +37061234567</small>
                         </div>
 
                         <div class="form-group">
@@ -230,9 +235,17 @@
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
             
-            // Simple validation
+            // Enhanced validation
             if (!data.name || !data.email || !data.phone || !data.privacy) {
                 alert('Prašome užpildyti visus privalomus laukus');
+                return;
+            }
+            
+            // Phone number format validation
+            const phonePattern = /^\+370[0-9]{8}$/;
+            if (!phonePattern.test(data.phone)) {
+                alert('Telefono numeris turi būti formatu +370XXXXXXXX (pvz.: +37061234567)');
+                document.getElementById('phone').focus();
                 return;
             }
             
@@ -251,19 +264,54 @@
             }, 2000);
         });
 
-        // Phone number formatting
+        // Phone number formatting and validation
         document.getElementById('phone').addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
+            
+            // Remove any existing +370 prefix to avoid duplication
+            if (value.startsWith('370')) {
+                value = value.substring(3);
+            }
+            
+            // Format based on input
             if (value.length > 0) {
-                if (value.startsWith('370')) {
-                    value = '+' + value;
-                } else if (value.startsWith('8')) {
+                if (value.startsWith('8')) {
+                    // Convert 8XXXXXXXX to +370XXXXXXXX
                     value = '+370' + value.substring(1);
-                } else if (!value.startsWith('+')) {
+                } else if (value.startsWith('6')) {
+                    // Convert 6XXXXXXXX to +3706XXXXXXXX
+                    value = '+370' + value;
+                } else {
+                    // Add +370 prefix for other numbers
                     value = '+370' + value;
                 }
             }
+            
+            // Limit to 12 characters (+370 + 8 digits)
+            if (value.length > 12) {
+                value = value.substring(0, 12);
+            }
+            
             e.target.value = value;
+            
+            // Validate format
+            const phonePattern = /^\+370[0-9]{8}$/;
+            if (value.length === 12 && !phonePattern.test(value)) {
+                e.target.setCustomValidity('Telefono numeris turi būti formatu +370XXXXXXXX');
+            } else {
+                e.target.setCustomValidity('');
+            }
+        });
+
+        // Additional validation on blur
+        document.getElementById('phone').addEventListener('blur', function(e) {
+            const phonePattern = /^\+370[0-9]{8}$/;
+            if (e.target.value && !phonePattern.test(e.target.value)) {
+                e.target.setCustomValidity('Telefono numeris turi būti formatu +370XXXXXXXX');
+                e.target.reportValidity();
+            } else {
+                e.target.setCustomValidity('');
+            }
         });
     </script>
 </body>
