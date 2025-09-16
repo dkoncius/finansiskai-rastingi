@@ -9,60 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;500;600;700&family=Roboto:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo" onclick="window.location.href='index.html'">
-                    <img src="https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/Finansiskai_Rastingi_final_logo-06.svg" alt="Finansiškai Raštingi" />
-                </div>
-                <nav class="navigation">
-                    <a href="index.html" class="nav-link">Pagrindinis</a>
-                    <a href="#problem" class="nav-link">Problema</a>
-                    <a href="#solution" class="nav-link">Sprendimas</a>
-                    <a href="#lecturer" class="nav-link">Apie mane</a>
-                    <a href="#faq" class="nav-link">DUK</a>
-                </nav>
-                <button class="header-cta" onclick="window.location.href='form.html'">
-                    Gauti konsultaciją
-                </button>
-                
-                <!-- Mobile Menu Button -->
-                <button class="mobile-menu-button" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Mobile Menu Dropdown -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-content">
-            <div class="mobile-menu-header">
-                <div class="mobile-logo">
-                    <img src="https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/Finansiskai_Rastingi_final_logo-06.svg" alt="Finansiškai Raštingi" />
-                </div>
-                <button class="mobile-menu-close" onclick="toggleMobileMenu()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <nav class="mobile-navigation">
-                <a href="index.html" class="mobile-nav-link" onclick="toggleMobileMenu()">Pagrindinis</a>
-                <a href="#problem" class="mobile-nav-link" onclick="toggleMobileMenu()">Problema</a>
-                <a href="#solution" class="mobile-nav-link" onclick="toggleMobileMenu()">Sprendimas</a>
-                <a href="#lecturer" class="mobile-nav-link" onclick="toggleMobileMenu()">Apie mane</a>
-                <a href="#faq" class="mobile-nav-link" onclick="toggleMobileMenu()">DUK</a>
-            </nav>
-            
-            <div class="mobile-menu-cta">
-                <button class="mobile-cta-button" onclick="window.location.href='form.html'">
-                    Gauti konsultaciją
-                    <i class="fas fa-arrow-right"></i>
-                </button>
-            </div>
-        </div>
-    </div>
 
     <!-- Logo Carousel -->
     <section class="logo-carousel">
@@ -109,17 +55,14 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Kaip jūsų įmonės laisvas lėšas paversti į 8-15% metinę grąžą (be pelno mokesčio)</h1>
-                <h2 class="hero-subtitle">Išmokite investuoti pelningai, sutaupant tūkstančius eurų mokesčių ir išlaikant aukštą likvidumą / o dividendus mokėkite sau palankiu metu</h2>
+                <h1 class="hero-title">15 MIN per mėn.<br>- saugi investavimo strategija<br><span class="hero-subtitle-small">(8-13% istorinė metinė grąža)</span></h1>
                 
-                <div class="hero-video">
-                    <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/9bZkp7q19f0?autoplay=0&mute=1&controls=1&showinfo=0&rel=0" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+                
+                <div class="hero-vsl">
+                    <div class="vsl-container">
+                        <div class="vsl-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
                     </div>
                 </div>
                 
@@ -155,56 +98,78 @@
     <section class="problem-section" id="problem">
         <div class="container">
             <h2 class="section-title">Jūsų pinigai praranda vertę</h2>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <h3><i class="fas fa-university"></i> Jūsų pinigai banke</h3>
-                    <div class="money-comparison">
-                        <div class="money-visual">
-                            <div class="money-bar bank-money">
-                                <div class="money-amount">€100,000</div>
-                                <div class="money-label">Pradžia</div>
-                            </div>
-                            <div class="arrow-down">
-                                <i class="fas fa-arrow-down"></i>
-                                <span>3 metai infliacijos</span>
-                            </div>
-                            <div class="money-bar final-money">
-                                <div class="money-amount">€68,300</div>
-                                <div class="money-label">Dabar</div>
-                            </div>
-                        </div>
-                        <div class="loss-summary">
-                            <div class="loss-amount">-€31,700</div>
-                            <div class="loss-text">Praradote per 3 metus</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="problem-card">
-                    <h3><i class="fas fa-chart-line"></i> Investavimas</h3>
-                    <div class="money-comparison">
-                        <div class="money-visual">
-                            <div class="money-bar bank-money">
-                                <div class="money-amount">€100,000</div>
-                                <div class="money-label">Pradžia</div>
-                            </div>
-                            <div class="arrow-up">
-                                <i class="fas fa-arrow-down"></i>
-                                <span>12% metinė grąža</span>
-                            </div>
-                            <div class="money-bar gain-money">
-                                <div class="money-amount">€140,500</div>
-                                <div class="money-label">Po 3 metų</div>
-                            </div>
-                        </div>
-                        <div class="gain-summary highlight-gain">
-                            <div class="gain-amount">+€40,500</div>
-                            <div class="gain-text">UŽDIRBOTE per 3 metus!</div>
-                            <div class="gain-subtitle">Tai €13,500 per metus!</div>
+            <p class="section-subtitle">Palyginkite, kiek praradote dėl infliacijos ir kiek galėjote uždirbti investuodami</p>
+            
+            <!-- Interactive Calculator -->
+            <div class="calculator-section">
+                <div class="calculator-input">
+                    <label for="initialAmount">Jūsų pradinė suma 2021 m. (€)</label>
+                    <div class="input-container">
+                        <input type="number" id="initialAmount" value="100000" min="1000" max="10000000">
+                        <div class="slider-container">
+                            <input type="range" id="amountSlider" min="1000" max="500000" value="100000">
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Summary Cards -->
+            <div class="summary-cards">
+                <div class="summary-card loss-card">
+                    <div class="card-icon">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Praradote dėl infliacijos</h3>
+                        <div class="card-amount" id="inflationLoss">-€0</div>
+                        <div class="card-subtitle">Reali vertė dabar: <span id="realValue">€0</span></div>
+                    </div>
+                </div>
+                
+                <div class="summary-card gain-card">
+                    <div class="card-icon">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Galėjote uždirbti</h3>
+                        <div class="card-amount" id="potentialGain">+€0</div>
+                        <div class="card-subtitle">Portfelio vertė: <span id="portfolioValue">€0</span></div>
+                    </div>
+                </div>
+                
+                <div class="summary-card difference-card">
+                    <div class="card-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Prarastos galimybės</h3>
+                        <div class="card-amount" id="opportunityCost">€0</div>
+                        <div class="card-subtitle">Skirtumas tarp strategijų</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Table -->
+            <div class="table-section">
+                <h3 class="table-title">Metinė analizė (2021-2025)</h3>
+                <div class="table-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Metai</th>
+                                <th>Infliacijos norma</th>
+                                <th>Praradimas (€)</th>
+                                <th>S&P 500 grąža</th>
+                                <th>Pelnas (€)</th>
+                                <th>Skirtumas (€)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
             <div class="problem-cta">
                 <button class="cta-button" onclick="window.location.href='form.html'">
                     Gauti Konsultaciją
@@ -214,63 +179,44 @@
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="solution-section" id="solution">
+    <!-- Strategic Consultation Section -->
+    <section class="strategic-consultation-section" id="solution">
         <div class="container">
-            <h2 class="section-title">Kaip mes jums padėsime</h2>
+            <h2 class="section-title">Sprendimas: Strateginė konsultacija</h2>
             
-            <!-- Timeline Process -->
-            <div class="timeline-container">
-                <div class="timeline-step">
-                    <div class="timeline-icon">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Įvertiname jūsų įmonės</h3>
-                        <p>finansinę situaciją, tikslus ir rizikos toleranciją</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-connector"></div>
-                
-                <div class="timeline-step">
-                    <div class="timeline-icon">
-                        <i class="fas fa-chess"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Strategija</h3>
-                        <p>Sukuriame investicijų portfelį ir mokesčių optimizavimo planą</p>
+            <!-- Process Steps -->
+            <div class="process-steps">
+                <!-- Step 1: Analysis -->
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Įvertiname finansinę situaciją</h3>
+                        <p class="step-description">Gilinamės į jūsų įmonės finansus, tikslus ir rizikos toleranciją, kad atpažintume geriausias investavimo galimybes.</p>
                     </div>
                 </div>
                 
-                <div class="timeline-connector"></div>
-                
-                <div class="timeline-step">
-                    <div class="timeline-icon">
-                        <i class="fas fa-seedling"></i>
+                <!-- Step 2: Strategy -->
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Kuriame investavimo strategiją</h3>
+                        <p class="step-description">Sudarome personalizuotą portfelį su 8-15% metine grąža, 0% pelno mokesčiu ir likvidumu per 1-3 dienas.</p>
                     </div>
-                    <div class="timeline-content">
-                        <h3>Atidarome sąskaitą</h3>
-                        <p>mokome investuoti, lydime kiekviename žingsnyje</p>
+                </div>
+                
+                <!-- Step 3: Support -->
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Padedame ir lydime</h3>
+                        <p class="step-description">Atidarome sąskaitą pas EU reguliuojamą brokerį, mokome investuoti ir teikiame asmeninį konsultantą.</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Benefits Grid -->
-            <div class="benefits-card">
-                <h3>Mūsų pasiūlymas:</h3>
-                <div class="benefits-grid">
-                    <ul>
-                        <li>8-15% vidutinė metinė grąža</li>
-                        <li>Augimo arba dividendus mokantis portfelis</li>
-                        <li>Likvidumas per 1-3 dienas</li>
-                    </ul>
-                    <ul>
-                        <li>0% pelno mokesčio juridiniams asmenims</li>
-                        <li>EU reguliuojamas brokeris</li>
-                        <li>Diversifikacija į 23 pasaulio rinkas</li>
-                    </ul>
-                </div>
+            <!-- Small text footer -->
+            <div class="consultation-footer">
+                <p class="small-text">Po konsultacijos turėsite žingsnis po žingsnio aiškų planą, kaip pelningai įdarbinti verslo pinigus, skiriant tam vos 15 min./mėn.</p>
             </div>
             
             <div class="solution-cta">
@@ -278,188 +224,6 @@
                     Gauti Konsultaciją
                     <i class="fas fa-arrow-right"></i>
                 </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- After Seminar Section -->
-    <section class="after-section">
-        <div class="container">
-            <h2 class="section-title">Po konsultacijos:</h2>
-            <div class="after-list">
-                <div class="after-item">
-                    <div class="after-number">1</div>
-                    <div class="after-content">
-                        <h3>Diversifikuotas portfelis</h3>
-                        <p>Išmoksite, kaip sudaryti diversifikuotą investicinį portfelį, kuris atitiks jūsų tikslus ir rizikos toleranciją.</p>
-                    </div>
-                </div>
-                
-                <div class="after-item">
-                    <div class="after-number">2</div>
-                    <div class="after-content">
-                        <h3>Emocijų valdymas</h3>
-                        <p>Suprasite, kaip emocijos veikia jūsų sprendimus ir kaip jas suvaldyti.</p>
-                    </div>
-                </div>
-                
-                <div class="after-item">
-                    <div class="after-number">3</div>
-                    <div class="after-content">
-                        <h3>Investavimo būdai</h3>
-                        <p>Atrasite, kokie investavimo būdai tinka jums dabartinėje ekonominėje situacijoje.</p>
-                    </div>
-                </div>
-                
-                <div class="after-item">
-                    <div class="after-number">4</div>
-                    <div class="after-content">
-                        <h3>Paprastumas</h3>
-                        <p>Įsisavinsit, jog investuoti nėra sudėtinga ir tam tikrai nereikia daug laiko ar didelių pinigų sumų</p>
-                    </div>
-                </div>
-            </div>
-            <button class="cta-button" onclick="window.location.href='form.html'">
-                Gauti konsultaciją
-                <i class="fas fa-arrow-right"></i>
-            </button>
-        </div>
-    </section>
-
-    <!-- Why Participate Section -->
-    <section class="why-section">
-        <div class="container">
-            <h2 class="section-title">Kodėl verta dalyvauti?</h2>
-            <div class="why-grid">
-                <div class="why-item">
-                    <h3 class="why-number">1.</h3>
-                    <h4>Praktinės ir realios žinios</h4>
-                    <p>Seminaro lektorius - licencijuotas investicijų konsultantas, užkietėjęs investuotojas, kas mėnesį investuojantis 70-80% savo gaunamų pinigų.</p>
-                    <div class="why-illustration">
-                        <img src="undraw iliustration/investing.svg" alt="Investavimo žinios" />
-                    </div>
-                </div>
-                <div class="why-item">
-                    <h3 class="why-number">2.</h3>
-                    <h4>Koncentruota informacija</h4>
-                    <p>Seminaras patiks ieškantiems koncentruotų žinių apie investavimo pradmenis vienoje vietoje, paprasta kalba.</p>
-                    <div class="why-illustration">
-                        <img src="undraw iliustration/file-search.svg" alt="Informacijos paieška" />
-                    </div>
-                </div>
-                <div class="why-item">
-                    <h3 class="why-number">3.</h3>
-                    <h4>Individualumas</h4>
-                    <p>Seminaro dalyviams dovanojame 1 val. edukacinę konsultaciją pasirinktomis asmeninių finansų valdymo temomis.</p>
-                    <div class="why-illustration">
-                        <img src="undraw iliustration/bitcoin.svg" alt="Individualūs sprendimai" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 
-    LECTURER SECTION - ELEMENTOR FRIENDLY VERSION
-    
-    Ši sekcija sukurta taip, kad būtų lengva atkartoti Elementor redaktoriuje:
-    
-    1. Kompaktiška informacija viršuje:
-       - Nuotrauka (120x120px, apvali)
-       - Vardas ir pavardė
-       - Pareigos
-       - 3 pagrindiniai statistikos skaičiai
-    
-    2. Accordion dropdown su išsamia informacija:
-       - Visi 6 kredencialai su ikonėlėmis
-       - Išsiskleidžia paspaudus "Išsami informacija"
-    
-    3. CTA mygtukas apačioje
-    
-    Elementor atkartojimui:
-    - Naudokite "Text Editor" widget'ą accordion turiniui
-    - "Image" widget'ą nuotraukai
-    - "Button" widget'ą CTA mygtukui
-    - "Accordion" widget'ą dropdown funkcionalumui
-    -->
-    <section class="lecturer-section" id="lecturer">
-        <div class="container">
-            <h2 class="section-title">Apie mane</h2>
-            
-            <!-- Compact Lecturer Info -->
-            <div class="lecturer-compact">
-                <div class="lecturer-basic-info">
-                    <div class="lecturer-image-small">
-                        <img src="https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/g-sypt.jpg" alt="Gintaras Pociūnas" />
-                    </div>
-                    <div class="lecturer-summary">
-                        <h3>Gintaras Pociūnas</h3>
-                        <p class="lecturer-title">Licencijuotas investicijų konsultantas</p>
-                        <div class="key-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">11+</span>
-                                <span class="stat-label">m. patirtis</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">€1.6M</span>
-                                <span class="stat-label">portfelis</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">150+</span>
-                                <span class="stat-label">klientai</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">12.7%</span>
-                                <span class="stat-label">vidutinė grąža</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Accordion for detailed info -->
-                <div class="lecturer-accordion">
-                    <div class="accordion-item">
-                        <div class="accordion-header" onclick="toggleLecturerAccordion(this)">
-                            <h4>Išsami informacija</h4>
-                            <i class="fas fa-chevron-down accordion-arrow"></i>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="detailed-credentials">
-                                <div class="credential-item">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    <span>11 metų verslo ir investavimo patirtis</span>
-                                </div>
-                                <div class="credential-item">
-                                    <i class="fas fa-certificate"></i>
-                                    <span>Licencijuotas investicijų konsultantas</span>
-                                </div>
-                                <div class="credential-item">
-                                    <i class="fas fa-trophy"></i>
-                                    <span>Million Dollar Round Table narys</span>
-                                </div>
-                                <div class="credential-item">
-                                    <i class="fas fa-building"></i>
-                                    <span>4 verslų akcininkas Lietuvoje ir užsienyje</span>
-                                </div>
-                                <div class="credential-item">
-                                    <i class="fas fa-chart-line"></i>
-                                    <span>Asmeninis €1.6M investicijų portfelis</span>
-                                </div>
-                                <div class="credential-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>Padėjo 150+ Lietuvos įmonėms optimizuoti finansus</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="lecturer-cta">
-                    <button class="cta-button" onclick="window.location.href='form.html'">
-                        Gauti konsultaciją
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
             </div>
         </div>
     </section>
@@ -564,6 +328,168 @@
             </div>
         </div>
     </section>
+
+    <!-- After Seminar Section -->
+    <section class="after-section">
+        <div class="container">
+            <h2 class="section-title">Po konsultacijos:</h2>
+            <div class="after-list">
+                <div class="after-item">
+                    <div class="after-number">1</div>
+                    <div class="after-content">
+                        <h3>Diversifikuotas portfelis</h3>
+                        <p>Išmoksite, kaip sudaryti diversifikuotą investicinį portfelį, kuris atitiks jūsų tikslus ir rizikos toleranciją.</p>
+                    </div>
+                </div>
+                
+                <div class="after-item">
+                    <div class="after-number">2</div>
+                    <div class="after-content">
+                        <h3>Emocijų valdymas</h3>
+                        <p>Suprasite, kaip emocijos veikia jūsų sprendimus ir kaip jas suvaldyti.</p>
+                    </div>
+                </div>
+                
+                <div class="after-item">
+                    <div class="after-number">3</div>
+                    <div class="after-content">
+                        <h3>Investavimo būdai</h3>
+                        <p>Atrasite, kokie investavimo būdai tinka jums dabartinėje ekonominėje situacijoje.</p>
+                    </div>
+                </div>
+                
+                <div class="after-item">
+                    <div class="after-number">4</div>
+                    <div class="after-content">
+                        <h3>Paprastumas</h3>
+                        <p>Įsisavinsit, jog investuoti nėra sudėtinga ir tam tikrai nereikia daug laiko ar didelių pinigų sumų</p>
+                    </div>
+                </div>
+            </div>
+            <button class="cta-button" onclick="window.location.href='form.html'">
+                Gauti konsultaciją
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+
+    <!-- 
+    LECTURER SECTION - ELEMENTOR FRIENDLY VERSION
+    
+    Ši sekcija sukurta taip, kad būtų lengva atkartoti Elementor redaktoriuje:
+    
+    1. Kompaktiška informacija viršuje:
+       - Nuotrauka (120x120px, apvali)
+       - Vardas ir pavardė
+       - Pareigos
+       - 3 pagrindiniai statistikos skaičiai
+    
+    2. Accordion dropdown su išsamia informacija:
+       - Visi 6 kredencialai su ikonėlėmis
+       - Išsiskleidžia paspaudus "Išsami informacija"
+    
+    3. CTA mygtukas apačioje
+    
+    Elementor atkartojimui:
+    - Naudokite "Text Editor" widget'ą accordion turiniui
+    - "Image" widget'ą nuotraukai
+    - "Button" widget'ą CTA mygtukui
+    - "Accordion" widget'ą dropdown funkcionalumui
+    -->
+    <section class="lecturer-section" id="lecturer">
+        <div class="container">
+            <h2 class="section-title">Apie mane</h2>
+            
+            <!-- Compact Lecturer Info -->
+            <div class="lecturer-compact">
+                <div class="lecturer-basic-info">
+                    <div class="lecturer-image-small">
+                        <img src="https://go.finansiskairastingi.lt/wp-content/uploads/2024/11/g-sypt.jpg" alt="Gintaras Pociūnas" />
+                    </div>
+                    <div class="lecturer-summary">
+                        <h3>Gintaras Pociūnas</h3>
+                        <p class="lecturer-title">Licencijuotas investicijų konsultantas</p>
+                        <div class="key-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">11+</span>
+                                <span class="stat-label">m. patirtis</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">€1.6M</span>
+                                <span class="stat-label">portfelis</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">150+</span>
+                                <span class="stat-label">klientai</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">12.7%</span>
+                                <span class="stat-label">vidutinė grąža</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Accordion for detailed info -->
+                <div class="lecturer-accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleLecturerAccordion(this)">
+                            <h4>Išsami informacija</h4>
+                            <i class="fas fa-chevron-down accordion-arrow"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="lecturer-introduction">
+                                <blockquote>
+                                    "Aš esu Gintaras Pociūnas – verslininkas ir licencijuotas investicijų makleris. Per pastaruosius 11 metų išvysčiau verslą ir praktiškai patyriau, kaip diversifikuotas investavimas gali apsaugoti nuo verslo griuties.
+                                    
+                                    Po nesėkmingų skyrybų su verslo partneriais netekau didelio kapitalo kiekio, tačiau investicijos į akcijas, ETF, nekilnojamąjį turtą ir kitas alternatyvas leido sukaupti 1,6 milijono eurų kapitalą. Tai suteikė finansinę laisvę kurti naujus projektus ir nepriklausyti tik nuo vieno pajamų šaltinio.
+                                    
+                                    Šiandien esu 4 verslų Lietuvoje ir užsienyje akcininkas, aktyviai dalyvauju startuolių ekosistemoje kaip verslo angelas. Padėjau tūkstančiams žmonių ir šimtams įmonių optimizuoti savo kapitalą.
+                                    
+                                    Kas svarbiausia – praktiškai suprantu verslo specifiką, apyvartinių lėšų poreikius ir mokestinius niuansus, kurie kritiškai svarbūs jūsų įmonės finansiniam planavimui."
+                                </blockquote>
+                            </div>
+                            <div class="detailed-credentials">
+                                <div class="credential-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>11 metų verslo ir investavimo patirtis</span>
+                                </div>
+                                <div class="credential-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Licencijuotas investicijų konsultantas</span>
+                                </div>
+                                <div class="credential-item">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>Million Dollar Round Table narys</span>
+                                </div>
+                                <div class="credential-item">
+                                    <i class="fas fa-building"></i>
+                                    <span>4 verslų akcininkas Lietuvoje ir užsienyje</span>
+                                </div>
+                                <div class="credential-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Asmeninis €1.6M investicijų portfelis</span>
+                                </div>
+                                <div class="credential-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Padėjo 150+ Lietuvos įmonėms optimizuoti finansus</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lecturer-cta">
+                    <button class="cta-button" onclick="window.location.href='form.html'">
+                        Gauti konsultaciją
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- FAQ Section -->
     <section class="faq-section" id="faq">
