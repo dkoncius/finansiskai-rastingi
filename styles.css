@@ -347,7 +347,7 @@ body {
     gap: 4rem;
     animation: scroll 40s linear infinite;
     width: max-content;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
 }
 
 .logo-item {
@@ -2714,18 +2714,12 @@ body {
         max-width: 1200px;
     }
     
-    .logo-carousel {
-        padding: 15px 0;
-    }
-    
     .logo-track {
         gap: 5rem;
-        padding: 0 3rem;
     }
     
     .logo-item {
-        height: 70px;
-        padding: 12px 20px;
+        height: 50px;
         margin: 0 12px;
     }
     
@@ -2943,12 +2937,12 @@ body {
     }
     
     .logo-carousel {
-        padding: 6px 0;
+        /* padding: 6px 0; */
     }
     
     .logo-track {
         gap: 2.5rem;
-        padding: 0 1rem;
+        /* padding: 0 1rem; */
     }
     
     .logo-item {
@@ -3003,7 +2997,7 @@ body {
         align-items: center;
         justify-content: center;
         margin-top: -60px; /* Offset the logo carousel height */
-        padding-top: 80px; /* Add top padding to account for logo carousel */
+        padding-top: 40px; /* Reduced top padding for better mobile spacing */
     }
     
     .fading-separator {
