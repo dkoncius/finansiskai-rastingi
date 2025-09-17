@@ -2459,6 +2459,132 @@ body {
     backdrop-filter: blur(10px);
 }
 
+/* Dark theme form styles */
+.form-dark .form-input,
+.form-dark .form-select,
+.form-dark .form-textarea {
+    background: var(--medium-gray);
+    color: var(--text-white);
+    border-color: var(--border-light);
+}
+
+.form-dark .form-input:focus,
+.form-dark .form-select:focus,
+.form-dark .form-textarea:focus {
+    background: var(--light-gray);
+    border-color: var(--primary-color);
+    color: var(--text-white);
+}
+
+/* Dropdown options styling for dark theme */
+.form-dark .form-select option {
+    background: var(--dark-gray);
+    color: var(--text-white);
+    padding: 0.5rem;
+}
+
+.form-dark .form-select option:hover {
+    background: var(--medium-gray);
+}
+
+/* Phone input container styles */
+.phone-input-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: stretch;
+}
+
+.phone-prefix-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--border-light);
+    border-radius: 12px 0 0 12px;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.flag-icon {
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+    transition: transform 0.2s ease;
+}
+
+.phone-prefix-wrapper:hover .flag-icon {
+    transform: scale(1.1);
+}
+
+.phone-prefix-select {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    min-width: 60px;
+}
+
+.phone-number-input {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid var(--border-light);
+    border-left: none;
+    border-radius: 0 12px 12px 0;
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--text-dark);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.phone-prefix-wrapper:focus-within,
+.phone-number-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 20px var(--shadow-green);
+}
+
+.phone-prefix-select:focus {
+    outline: none;
+}
+
+/* Dark theme phone input styles */
+.form-dark .phone-prefix-wrapper {
+    background: var(--medium-gray);
+    border-color: var(--border-light);
+}
+
+.form-dark .phone-prefix-select {
+    color: var(--text-white);
+}
+
+.form-dark .phone-number-input {
+    background: var(--medium-gray);
+    color: var(--text-white);
+    border-color: var(--border-light);
+}
+
+.form-dark .phone-prefix-wrapper:focus-within,
+.form-dark .phone-number-input:focus {
+    background: var(--light-gray);
+    border-color: var(--primary-color);
+}
+
+.form-dark .phone-prefix-select option {
+    background: var(--dark-gray);
+    color: var(--text-white);
+}
+
 .form-input:focus,
 .form-select:focus,
 .form-textarea:focus {

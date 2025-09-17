@@ -107,14 +107,22 @@
                         <div class="form-group">
                             <label for="phone" class="form-label">
                                 <i class="fas fa-phone"></i>
-                                Telefono numeris * (formatas: +370XXXXXXXX)
+                                Telefono numeris *
                             </label>
-                            <input type="tel" id="phone" name="phone" class="form-input" 
-                                   placeholder="+370XXXXXXXX" 
-                                   pattern="^\+370[0-9]{8}$" 
-                                   title="Įveskite telefono numerį formatu +370XXXXXXXX" 
-                                   required>
-                            <small class="form-help">Pvz.: +37061234567</small>
+                            <div class="phone-input-container">
+                                <div class="phone-prefix-wrapper">
+                                    <span class="flag-icon">🇱🇹</span>
+                                    <select id="phonePrefix" name="phonePrefix" class="phone-prefix-select" required>
+                                        <option value="+370">+370</option>
+                                    </select>
+                                </div>
+                                <input type="tel" id="phone" name="phone" class="phone-number-input" 
+                                       placeholder="XXXXXXXX" 
+                                       pattern="^[0-9]{8}$" 
+                                       title="Įveskite telefono numerį be +370 prefikso" 
+                                       required>
+                            </div>
+                            <small class="form-help">Pvz.: 61234567</small>
                         </div>
 
                         <div class="form-group">
@@ -242,62 +250,55 @@
             }
             
             // Phone number format validation
-            const phonePattern = /^\+370[0-9]{8}$/;
+            const phonePattern = /^[0-9]{8}$/;
             if (!phonePattern.test(data.phone)) {
-                alert('Telefono numeris turi būti formatu +370XXXXXXXX (pvz.: +37061234567)');
+                alert('Telefono numeris turi būti formatu XXXXXXXXX (pvz.: 61234567)');
                 document.getElementById('phone').focus();
                 return;
             }
             
-            // Simulate form submission
-            const submitBtn = document.querySelector('.form-submit');
-            const originalText = submitBtn.innerHTML;
+            // Combine prefix and phone number for CRM
+            const fullPhoneNumber = data.phonePrefix + data.phone;
             
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Siunčiama...';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                alert('Ačiū! Jūsų užklausa sėkmingai išsiųsta. Susisieksime su jumis per 24 valandas.');
-                this.reset();
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }, 2000);
+            // Prepare data for CRM
+            const crmData = {
+                name: data.name,
+                email: data.email,
+                phone: fullPhoneNumber,
+                company: data.company || '',
+                position: data.position || '',
+                investment_amount: data.investment || '',
+                experience: data.experience || '',
+                goals: data.goals || '',
+                message: data.message || '',
+                newsletter: data.newsletter ? 'Yes' : 'No',
+                privacy_accepted: data.privacy ? 'Yes' : 'No',
+                source: 'Website Form',
+                timestamp: new Date().toISOString(),
+                utm_source: getUrlParameter('utm_source') || 'direct',
+                utm_medium: getUrlParameter('utm_medium') || 'organic',
+                utm_campaign: getUrlParameter('utm_campaign') || 'consultation_form'
+            };
+
+            // Submit to CRM
+            submitToCRM(crmData);
         });
 
         // Phone number formatting and validation
         document.getElementById('phone').addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
             
-            // Remove any existing +370 prefix to avoid duplication
-            if (value.startsWith('370')) {
-                value = value.substring(3);
-            }
-            
-            // Format based on input
-            if (value.length > 0) {
-                if (value.startsWith('8')) {
-                    // Convert 8XXXXXXXX to +370XXXXXXXX
-                    value = '+370' + value.substring(1);
-                } else if (value.startsWith('6')) {
-                    // Convert 6XXXXXXXX to +3706XXXXXXXX
-                    value = '+370' + value;
-                } else {
-                    // Add +370 prefix for other numbers
-                    value = '+370' + value;
-                }
-            }
-            
-            // Limit to 12 characters (+370 + 8 digits)
-            if (value.length > 12) {
-                value = value.substring(0, 12);
+            // Limit to 8 digits
+            if (value.length > 8) {
+                value = value.substring(0, 8);
             }
             
             e.target.value = value;
             
             // Validate format
-            const phonePattern = /^\+370[0-9]{8}$/;
-            if (value.length === 12 && !phonePattern.test(value)) {
-                e.target.setCustomValidity('Telefono numeris turi būti formatu +370XXXXXXXX');
+            const phonePattern = /^[0-9]{8}$/;
+            if (value.length === 8 && !phonePattern.test(value)) {
+                e.target.setCustomValidity('Telefono numeris turi būti formatu XXXXXXXXX');
             } else {
                 e.target.setCustomValidity('');
             }
@@ -305,14 +306,190 @@
 
         // Additional validation on blur
         document.getElementById('phone').addEventListener('blur', function(e) {
-            const phonePattern = /^\+370[0-9]{8}$/;
+            const phonePattern = /^[0-9]{8}$/;
             if (e.target.value && !phonePattern.test(e.target.value)) {
-                e.target.setCustomValidity('Telefono numeris turi būti formatu +370XXXXXXXX');
+                e.target.setCustomValidity('Telefono numeris turi būti formatu XXXXXXXXX');
                 e.target.reportValidity();
             } else {
                 e.target.setCustomValidity('');
             }
         });
+
+        // Utility function to get URL parameters
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // CRM Integration Function
+        async function submitToCRM(data) {
+            const submitBtn = document.querySelector('.form-submit');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Siunčiama...';
+            submitBtn.disabled = true;
+            
+            try {
+                // Option 1: Send to webhook endpoint (recommended for most CRMs)
+                const webhookUrl = 'https://hooks.zapier.com/hooks/catch/YOUR_WEBHOOK_ID/'; // Replace with your webhook URL
+                
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    // Success
+                    showSuccessMessage();
+                    document.getElementById('consultationForm').reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+                
+            } catch (error) {
+                console.error('CRM submission error:', error);
+                
+                // Fallback: Send to email or alternative endpoint
+                try {
+                    await submitToEmail(data);
+                } catch (emailError) {
+                    console.error('Email fallback error:', emailError);
+                    showErrorMessage();
+                }
+            } finally {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        }
+
+        // Email fallback function
+        async function submitToEmail(data) {
+            const emailEndpoint = '/api/send-email'; // Replace with your email endpoint
+            
+            const response = await fetch(emailEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    to: 'info@finansiskairastingi.lt', // Replace with your email
+                    subject: 'Nauja konsultacijos užklausa',
+                    body: `
+Nauja konsultacijos užklausa:
+
+Vardas: ${data.name}
+El. paštas: ${data.email}
+Telefonas: ${data.phone}
+Įmonė: ${data.company}
+Pareigos: ${data.position}
+Investavimo suma: ${data.investment_amount}
+Patirtis: ${data.experience}
+Tikslai: ${data.goals}
+Papildoma informacija: ${data.message}
+Naujienlaiškis: ${data.newsletter}
+Privatumo politika: ${data.privacy_accepted}
+
+Šaltinis: ${data.source}
+Laikas: ${data.timestamp}
+UTM šaltinis: ${data.utm_source}
+UTM kanalas: ${data.utm_medium}
+UTM kampanija: ${data.utm_campaign}
+                    `
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error('Email submission failed');
+            }
+        }
+
+        // Success message
+        function showSuccessMessage() {
+            alert('Ačiū! Jūsų užklausa sėkmingai išsiųsta. Susisieksime su jumis per 24 valandas.');
+        }
+
+        // Error message
+        function showErrorMessage() {
+            alert('Atsiprašome, įvyko klaida siunčiant užklausą. Prašome bandyti dar kartą arba susisiekti tiesiogiai.');
+        }
+
+        // Alternative CRM integrations (uncomment and configure as needed)
+        
+        // HubSpot integration
+        /*
+        function submitToHubSpot(data) {
+            const hubspotFormId = 'YOUR_HUBSPOT_FORM_ID';
+            const hubspotPortalId = 'YOUR_HUBSPOT_PORTAL_ID';
+            
+            const formData = new FormData();
+            formData.append('hs_context', JSON.stringify({
+                hutk: getCookie('hubspotutk'),
+                pageUri: window.location.href,
+                pageName: document.title
+            }));
+            
+            Object.keys(data).forEach(key => {
+                formData.append(key, data[key]);
+            });
+            
+            fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${hubspotPortalId}/${hubspotFormId}`, {
+                method: 'POST',
+                body: formData
+            });
+        }
+        */
+
+        // Salesforce integration
+        /*
+        function submitToSalesforce(data) {
+            const salesforceEndpoint = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8';
+            
+            const formData = new FormData();
+            formData.append('oid', 'YOUR_SALESFORCE_ORG_ID');
+            formData.append('first_name', data.name.split(' ')[0]);
+            formData.append('last_name', data.name.split(' ').slice(1).join(' '));
+            formData.append('email', data.email);
+            formData.append('phone', data.phone);
+            formData.append('company', data.company);
+            formData.append('lead_source', 'Website');
+            
+            fetch(salesforceEndpoint, {
+                method: 'POST',
+                body: formData
+            });
+        }
+        */
+
+        // Pipedrive integration
+        /*
+        function submitToPipedrive(data) {
+            const pipedriveApiKey = 'YOUR_PIPEDRIVE_API_KEY';
+            const pipedriveEndpoint = 'https://api.pipedrive.com/v1/persons';
+            
+            fetch(pipedriveEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${pipedriveApiKey}`
+                },
+                body: JSON.stringify({
+                    name: data.name,
+                    email: [{
+                        value: data.email,
+                        primary: true
+                    }],
+                    phone: [{
+                        value: data.phone,
+                        primary: true
+                    }],
+                    org_name: data.company
+                })
+            });
+        }
+        */
     </script>
 </body>
 </html>
